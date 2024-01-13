@@ -36,22 +36,23 @@
             textBox1 = new TextBox();
             menuStrip1 = new MenuStrip();
             toolStripMenuItem1 = new ToolStripMenuItem();
-            panel3 = new Panel();
-            pictureBox1 = new PictureBox();
-            dataGridView1 = new DataGridView();
-            panel4 = new Panel();
             panelIcono = new Panel();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            pictureBox3 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox5 = new PictureBox();
-            pictureBox6 = new PictureBox();
-            pictureBox11 = new PictureBox();
+            pcbmuestra1 = new PictureBox();
+            pcbmuestra2 = new PictureBox();
+            pcbmuestra3 = new PictureBox();
+            pcbmuestra4 = new PictureBox();
+            pcbseleccion = new PictureBox();
             flowLayoutPanel2 = new FlowLayoutPanel();
-            pictureBox7 = new PictureBox();
-            pictureBox8 = new PictureBox();
-            pictureBox9 = new PictureBox();
-            pictureBox10 = new PictureBox();
+            pcbmuestra5 = new PictureBox();
+            pcbmuestra6 = new PictureBox();
+            pcbmuestra7 = new PictureBox();
+            pcbmuestra8 = new PictureBox();
+            panelviewdata = new Panel();
+            pcbAgregar = new PictureBox();
+            tblContent = new DataGridView();
+            Delete = new DataGridViewImageColumn();
+            panelcontainerdata = new Panel();
             panel5 = new Panel();
             lblEligeIcon = new Label();
             pcbIcon = new PictureBox();
@@ -78,22 +79,22 @@
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             menuStrip1.SuspendLayout();
-            panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel4.SuspendLayout();
             panelIcono.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbmuestra1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbmuestra2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbmuestra3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbmuestra4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbseleccion).BeginInit();
             flowLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbmuestra5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbmuestra6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbmuestra7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbmuestra8).BeginInit();
+            panelviewdata.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pcbAgregar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tblContent).BeginInit();
+            panelcontainerdata.SuspendLayout();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcbIcon).BeginInit();
             menuStrip2.SuspendLayout();
@@ -173,174 +174,193 @@
             toolStripMenuItem1.Name = "toolStripMenuItem1";
             toolStripMenuItem1.Size = new Size(28, 25);
             // 
-            // panel3
-            // 
-            panel3.Controls.Add(pictureBox1);
-            panel3.Dock = DockStyle.Right;
-            panel3.Location = new Point(657, 112);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(143, 452);
-            panel3.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(3, 136);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(136, 161);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToResizeRows = false;
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(0, 112);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(657, 452);
-            dataGridView1.TabIndex = 3;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = SystemColors.ActiveBorder;
-            panel4.Controls.Add(panelIcono);
-            panel4.Controls.Add(panel5);
-            panel4.Font = new Font("Segoe UI", 12F);
-            panel4.Location = new Point(56, 129);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(582, 388);
-            panel4.TabIndex = 1;
-            panel4.Paint += panel4_Paint;
-            // 
             // panelIcono
             // 
             panelIcono.BackColor = SystemColors.ControlDark;
             panelIcono.Controls.Add(flowLayoutPanel1);
-            panelIcono.Controls.Add(pictureBox11);
+            panelIcono.Controls.Add(pcbseleccion);
             panelIcono.Controls.Add(flowLayoutPanel2);
-            panelIcono.Location = new Point(14, 256);
+            panelIcono.Location = new Point(0, 0);
             panelIcono.Name = "panelIcono";
-            panelIcono.Size = new Size(565, 115);
+            panelIcono.Size = new Size(797, 508);
             panelIcono.TabIndex = 5;
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Controls.Add(pictureBox3);
-            flowLayoutPanel1.Controls.Add(pictureBox4);
-            flowLayoutPanel1.Controls.Add(pictureBox5);
-            flowLayoutPanel1.Controls.Add(pictureBox6);
-            flowLayoutPanel1.Location = new Point(19, 19);
+            flowLayoutPanel1.Controls.Add(pcbmuestra1);
+            flowLayoutPanel1.Controls.Add(pcbmuestra2);
+            flowLayoutPanel1.Controls.Add(pcbmuestra3);
+            flowLayoutPanel1.Controls.Add(pcbmuestra4);
+            flowLayoutPanel1.Location = new Point(111, 15);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(540, 114);
             flowLayoutPanel1.TabIndex = 0;
             // 
-            // pictureBox3
+            // pcbmuestra1
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(3, 3);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(128, 107);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 0;
-            pictureBox3.TabStop = false;
+            pcbmuestra1.Image = (Image)resources.GetObject("pcbmuestra1.Image");
+            pcbmuestra1.Location = new Point(3, 3);
+            pcbmuestra1.Name = "pcbmuestra1";
+            pcbmuestra1.Size = new Size(128, 107);
+            pcbmuestra1.SizeMode = PictureBoxSizeMode.Zoom;
+            pcbmuestra1.TabIndex = 0;
+            pcbmuestra1.TabStop = false;
+            pcbmuestra1.Click += pcbmuestra1_Click;
             // 
-            // pictureBox4
+            // pcbmuestra2
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(137, 3);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(128, 107);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 1;
-            pictureBox4.TabStop = false;
+            pcbmuestra2.Image = (Image)resources.GetObject("pcbmuestra2.Image");
+            pcbmuestra2.Location = new Point(137, 3);
+            pcbmuestra2.Name = "pcbmuestra2";
+            pcbmuestra2.Size = new Size(128, 107);
+            pcbmuestra2.SizeMode = PictureBoxSizeMode.Zoom;
+            pcbmuestra2.TabIndex = 1;
+            pcbmuestra2.TabStop = false;
+            pcbmuestra2.Click += pcbmuestra2_Click;
             // 
-            // pictureBox5
+            // pcbmuestra3
             // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(271, 3);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(128, 107);
-            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox5.TabIndex = 2;
-            pictureBox5.TabStop = false;
+            pcbmuestra3.Image = (Image)resources.GetObject("pcbmuestra3.Image");
+            pcbmuestra3.Location = new Point(271, 3);
+            pcbmuestra3.Name = "pcbmuestra3";
+            pcbmuestra3.Size = new Size(128, 107);
+            pcbmuestra3.SizeMode = PictureBoxSizeMode.Zoom;
+            pcbmuestra3.TabIndex = 2;
+            pcbmuestra3.TabStop = false;
+            pcbmuestra3.Click += pcbmuestra3_Click;
             // 
-            // pictureBox6
+            // pcbmuestra4
             // 
-            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(405, 3);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(128, 107);
-            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox6.TabIndex = 3;
-            pictureBox6.TabStop = false;
+            pcbmuestra4.Image = (Image)resources.GetObject("pcbmuestra4.Image");
+            pcbmuestra4.Location = new Point(405, 3);
+            pcbmuestra4.Name = "pcbmuestra4";
+            pcbmuestra4.Size = new Size(128, 107);
+            pcbmuestra4.SizeMode = PictureBoxSizeMode.Zoom;
+            pcbmuestra4.TabIndex = 3;
+            pcbmuestra4.TabStop = false;
+            pcbmuestra4.Click += pcbmuestra4_Click;
             // 
-            // pictureBox11
+            // pcbseleccion
             // 
-            pictureBox11.Cursor = Cursors.Hand;
-            pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
-            pictureBox11.Location = new Point(22, 257);
-            pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(128, 107);
-            pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox11.TabIndex = 1;
-            pictureBox11.TabStop = false;
+            pcbseleccion.Cursor = Cursors.Hand;
+            pcbseleccion.Image = (Image)resources.GetObject("pcbseleccion.Image");
+            pcbseleccion.Location = new Point(111, 257);
+            pcbseleccion.Name = "pcbseleccion";
+            pcbseleccion.Size = new Size(131, 108);
+            pcbseleccion.SizeMode = PictureBoxSizeMode.Zoom;
+            pcbseleccion.TabIndex = 1;
+            pcbseleccion.TabStop = false;
             // 
             // flowLayoutPanel2
             // 
-            flowLayoutPanel2.Controls.Add(pictureBox7);
-            flowLayoutPanel2.Controls.Add(pictureBox8);
-            flowLayoutPanel2.Controls.Add(pictureBox9);
-            flowLayoutPanel2.Controls.Add(pictureBox10);
-            flowLayoutPanel2.Location = new Point(19, 135);
+            flowLayoutPanel2.Controls.Add(pcbmuestra5);
+            flowLayoutPanel2.Controls.Add(pcbmuestra6);
+            flowLayoutPanel2.Controls.Add(pcbmuestra7);
+            flowLayoutPanel2.Controls.Add(pcbmuestra8);
+            flowLayoutPanel2.Location = new Point(114, 137);
             flowLayoutPanel2.Name = "flowLayoutPanel2";
             flowLayoutPanel2.Size = new Size(540, 114);
             flowLayoutPanel2.TabIndex = 0;
             // 
-            // pictureBox7
+            // pcbmuestra5
             // 
-            pictureBox7.ErrorImage = (Image)resources.GetObject("pictureBox7.ErrorImage");
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(3, 3);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(128, 107);
-            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox7.TabIndex = 0;
-            pictureBox7.TabStop = false;
+            pcbmuestra5.ErrorImage = (Image)resources.GetObject("pcbmuestra5.ErrorImage");
+            pcbmuestra5.Image = (Image)resources.GetObject("pcbmuestra5.Image");
+            pcbmuestra5.Location = new Point(3, 3);
+            pcbmuestra5.Name = "pcbmuestra5";
+            pcbmuestra5.Size = new Size(128, 107);
+            pcbmuestra5.SizeMode = PictureBoxSizeMode.Zoom;
+            pcbmuestra5.TabIndex = 0;
+            pcbmuestra5.TabStop = false;
+            pcbmuestra5.Click += pcbmuestra5_Click;
             // 
-            // pictureBox8
+            // pcbmuestra6
             // 
-            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(137, 3);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(128, 107);
-            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox8.TabIndex = 1;
-            pictureBox8.TabStop = false;
+            pcbmuestra6.Image = (Image)resources.GetObject("pcbmuestra6.Image");
+            pcbmuestra6.Location = new Point(137, 3);
+            pcbmuestra6.Name = "pcbmuestra6";
+            pcbmuestra6.Size = new Size(128, 107);
+            pcbmuestra6.SizeMode = PictureBoxSizeMode.Zoom;
+            pcbmuestra6.TabIndex = 1;
+            pcbmuestra6.TabStop = false;
+            pcbmuestra6.Click += pcbmuestra6_Click;
             // 
-            // pictureBox9
+            // pcbmuestra7
             // 
-            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(271, 3);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(128, 107);
-            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox9.TabIndex = 2;
-            pictureBox9.TabStop = false;
+            pcbmuestra7.Image = (Image)resources.GetObject("pcbmuestra7.Image");
+            pcbmuestra7.Location = new Point(271, 3);
+            pcbmuestra7.Name = "pcbmuestra7";
+            pcbmuestra7.Size = new Size(128, 107);
+            pcbmuestra7.SizeMode = PictureBoxSizeMode.Zoom;
+            pcbmuestra7.TabIndex = 2;
+            pcbmuestra7.TabStop = false;
+            pcbmuestra7.Click += pcbmuestra7_Click;
             // 
-            // pictureBox10
+            // pcbmuestra8
             // 
-            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(405, 3);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(128, 107);
-            pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox10.TabIndex = 3;
-            pictureBox10.TabStop = false;
+            pcbmuestra8.Image = (Image)resources.GetObject("pcbmuestra8.Image");
+            pcbmuestra8.Location = new Point(405, 3);
+            pcbmuestra8.Name = "pcbmuestra8";
+            pcbmuestra8.Size = new Size(128, 107);
+            pcbmuestra8.SizeMode = PictureBoxSizeMode.Zoom;
+            pcbmuestra8.TabIndex = 3;
+            pcbmuestra8.TabStop = false;
+            pcbmuestra8.Click += pcbmuestra8_Click;
+            // 
+            // panelviewdata
+            // 
+            panelviewdata.Controls.Add(pcbAgregar);
+            panelviewdata.Dock = DockStyle.Right;
+            panelviewdata.Location = new Point(657, 112);
+            panelviewdata.Name = "panelviewdata";
+            panelviewdata.Size = new Size(143, 452);
+            panelviewdata.TabIndex = 2;
+            // 
+            // pcbAgregar
+            // 
+            pcbAgregar.Image = (Image)resources.GetObject("pcbAgregar.Image");
+            pcbAgregar.Location = new Point(3, 136);
+            pcbAgregar.Name = "pcbAgregar";
+            pcbAgregar.Size = new Size(136, 161);
+            pcbAgregar.SizeMode = PictureBoxSizeMode.Zoom;
+            pcbAgregar.TabIndex = 0;
+            pcbAgregar.TabStop = false;
+            pcbAgregar.Click += pcbAgregar_Click;
+            // 
+            // tblContent
+            // 
+            tblContent.AllowUserToAddRows = false;
+            tblContent.AllowUserToResizeRows = false;
+            tblContent.BackgroundColor = Color.White;
+            tblContent.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tblContent.Columns.AddRange(new DataGridViewColumn[] { Delete });
+            tblContent.Dock = DockStyle.Fill;
+            tblContent.Location = new Point(0, 112);
+            tblContent.Name = "tblContent";
+            tblContent.RowHeadersVisible = false;
+            tblContent.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            tblContent.Size = new Size(800, 452);
+            tblContent.TabIndex = 3;
+            tblContent.CellDoubleClick += tblContent_CellDoubleClick;
+            // 
+            // Delete
+            // 
+            Delete.HeaderText = "";
+            Delete.Image = (Image)resources.GetObject("Delete.Image");
+            Delete.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            Delete.Name = "Delete";
+            // 
+            // panelcontainerdata
+            // 
+            panelcontainerdata.BackColor = SystemColors.ActiveBorder;
+            panelcontainerdata.Controls.Add(panelIcono);
+            panelcontainerdata.Controls.Add(panel5);
+            panelcontainerdata.Font = new Font("Segoe UI", 12F);
+            panelcontainerdata.Location = new Point(0, 56);
+            panelcontainerdata.Name = "panelcontainerdata";
+            panelcontainerdata.Size = new Size(800, 508);
+            panelcontainerdata.TabIndex = 1;
+            panelcontainerdata.Paint += panel4_Paint;
             // 
             // panel5
             // 
@@ -363,9 +383,9 @@
             panel5.Controls.Add(label2);
             panel5.Controls.Add(label1);
             panel5.Controls.Add(menuStrip2);
-            panel5.Location = new Point(14, 3);
+            panel5.Location = new Point(89, 59);
             panel5.Name = "panel5";
-            panel5.Size = new Size(565, 247);
+            panel5.Size = new Size(549, 260);
             panel5.TabIndex = 4;
             panel5.Paint += panel5_Paint;
             // 
@@ -381,14 +401,17 @@
             lblEligeIcon.TabIndex = 12;
             lblEligeIcon.Text = "Elige un Icono";
             lblEligeIcon.TextAlign = ContentAlignment.MiddleCenter;
+            lblEligeIcon.Click += lblEligeIcon_Click;
             // 
             // pcbIcon
             // 
             pcbIcon.Location = new Point(418, 15);
             pcbIcon.Name = "pcbIcon";
             pcbIcon.Size = new Size(117, 111);
+            pcbIcon.SizeMode = PictureBoxSizeMode.Zoom;
             pcbIcon.TabIndex = 13;
             pcbIcon.TabStop = false;
+            pcbIcon.Click += pcbIcon_Click;
             // 
             // btnVolver
             // 
@@ -401,14 +424,16 @@
             btnVolver.TabIndex = 11;
             btnVolver.Text = "Volver";
             btnVolver.UseVisualStyleBackColor = true;
+            btnVolver.Click += btnVolver_Click;
             // 
             // cmRol
             // 
+            cmRol.DropDownStyle = ComboBoxStyle.DropDownList;
             cmRol.FormattingEnabled = true;
             cmRol.Items.AddRange(new object[] { "Solo Ventas(NO esta autrizado para manejar dinero)", "Cajero(SI esta autrizado para manejar dinero)", "Administrador(Control Total)" });
             cmRol.Location = new Point(199, 142);
             cmRol.Name = "cmRol";
-            cmRol.Size = new Size(284, 29);
+            cmRol.Size = new Size(227, 29);
             cmRol.TabIndex = 9;
             // 
             // panel10
@@ -422,7 +447,7 @@
             // txtNombre
             // 
             txtNombre.BorderStyle = BorderStyle.None;
-            txtNombre.Location = new Point(199, 5);
+            txtNombre.Location = new Point(199, 0);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(201, 22);
             txtNombre.TabIndex = 7;
@@ -546,6 +571,7 @@
             btnGuardarCambio.Name = "btnGuardarCambio";
             btnGuardarCambio.Size = new Size(153, 26);
             btnGuardarCambio.Text = "Guardar Cambios";
+            btnGuardarCambio.Click += btnGuardarCambio_Click;
             // 
             // toolStripMenuItem4
             // 
@@ -563,35 +589,37 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(800, 564);
-            Controls.Add(panel4);
-            Controls.Add(dataGridView1);
-            Controls.Add(panel3);
+            Controls.Add(panelcontainerdata);
+            Controls.Add(panelviewdata);
+            Controls.Add(tblContent);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "UsuariosOK";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += UsuariosOK_Load;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            panel4.ResumeLayout(false);
             panelIcono.ResumeLayout(false);
             flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbmuestra1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbmuestra2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbmuestra3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbmuestra4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbseleccion).EndInit();
             flowLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbmuestra5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbmuestra6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbmuestra7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbmuestra8).EndInit();
+            panelviewdata.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pcbAgregar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tblContent).EndInit();
+            panelcontainerdata.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pcbIcon).EndInit();
@@ -609,10 +637,10 @@
         private TextBox textBox1;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem toolStripMenuItem1;
-        private Panel panel3;
-        private PictureBox pictureBox1;
-        private DataGridView dataGridView1;
-        private Panel panel4;
+        private Panel panelviewdata;
+        private PictureBox pcbAgregar;
+        private DataGridView tblContent;
+        private Panel panelcontainerdata;
         private Panel panel5;
         private Label label4;
         private Label label3;
@@ -638,15 +666,16 @@
         private PictureBox pcbIcon;
         private Panel panelIcono;
         private FlowLayoutPanel flowLayoutPanel1;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox6;
+        private PictureBox pcbmuestra1;
+        private PictureBox pcbmuestra2;
+        private PictureBox pcbmuestra3;
+        private PictureBox pcbmuestra4;
         private FlowLayoutPanel flowLayoutPanel2;
-        private PictureBox pictureBox7;
-        private PictureBox pictureBox8;
-        private PictureBox pictureBox9;
-        private PictureBox pictureBox10;
-        private PictureBox pictureBox11;
+        private PictureBox pcbmuestra5;
+        private PictureBox pcbmuestra6;
+        private PictureBox pcbmuestra7;
+        private PictureBox pcbmuestra8;
+        private PictureBox pcbseleccion;
+        private DataGridViewImageColumn Delete;
     }
 }

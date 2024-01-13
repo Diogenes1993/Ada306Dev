@@ -8,7 +8,7 @@ namespace PUNTO_DE_VENTA_COD_369_CSHARK.CONEXIONLOG
 {
     internal class ConexionBD
     {
-        private static string conexion = @"Data Source=DESKTOP-8ONKPR4;Initial Catalog=BASEADACURSO;Integrated Security=True;";
+        public static string conexion = @"Data Source=DESKTOP-8ONKPR4;Initial Catalog=BASEADACURSO;Integrated Security=True;";
         
     }
 }
