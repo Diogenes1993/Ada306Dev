@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "PUNTO_DE_VENTA_COD_369_CSHARK/1.0.0": {
+        "runtime": {
+          "PUNTO_DE_VENTA_COD_369_CSHARK.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PUNTO_DE_VENTA_COD_369_CSHARK/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

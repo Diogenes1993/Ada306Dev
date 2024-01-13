@@ -40,41 +40,41 @@
             pictureBox1 = new PictureBox();
             dataGridView1 = new DataGridView();
             panel4 = new Panel();
-            panel5 = new Panel();
-            comboBox1 = new ComboBox();
-            panel10 = new Panel();
-            textBox6 = new TextBox();
-            panel8 = new Panel();
-            textBox4 = new TextBox();
-            panel7 = new Panel();
-            textBox3 = new TextBox();
-            panel6 = new Panel();
-            textBox2 = new TextBox();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            menuStrip2 = new MenuStrip();
-            toolStripMenuItem2 = new ToolStripMenuItem();
-            toolStripMenuItem3 = new ToolStripMenuItem();
-            toolStripMenuItem4 = new ToolStripMenuItem();
-            toolStripMenuItem5 = new ToolStripMenuItem();
-            button2 = new Button();
-            label6 = new Label();
-            pictureBox2 = new PictureBox();
             panelIcono = new Panel();
             flowLayoutPanel1 = new FlowLayoutPanel();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox6 = new PictureBox();
+            pictureBox11 = new PictureBox();
             flowLayoutPanel2 = new FlowLayoutPanel();
             pictureBox7 = new PictureBox();
             pictureBox8 = new PictureBox();
             pictureBox9 = new PictureBox();
             pictureBox10 = new PictureBox();
-            pictureBox11 = new PictureBox();
+            panel5 = new Panel();
+            lblEligeIcon = new Label();
+            pcbIcon = new PictureBox();
+            btnVolver = new Button();
+            cmRol = new ComboBox();
+            panel10 = new Panel();
+            txtNombre = new TextBox();
+            panel8 = new Panel();
+            txtEmail = new TextBox();
+            panel7 = new Panel();
+            txtContra = new TextBox();
+            panel6 = new Panel();
+            txtUser = new TextBox();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            menuStrip2 = new MenuStrip();
+            btnGuardar = new ToolStripMenuItem();
+            btnGuardarCambio = new ToolStripMenuItem();
+            toolStripMenuItem4 = new ToolStripMenuItem();
+            toolStripMenuItem5 = new ToolStripMenuItem();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             menuStrip1.SuspendLayout();
@@ -82,21 +82,21 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel4.SuspendLayout();
-            panel5.SuspendLayout();
-            menuStrip2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panelIcono.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
+            panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pcbIcon).BeginInit();
+            menuStrip2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -217,220 +217,6 @@
             panel4.TabIndex = 1;
             panel4.Paint += panel4_Paint;
             // 
-            // panel5
-            // 
-            panel5.BackColor = SystemColors.ButtonHighlight;
-            panel5.Controls.Add(label6);
-            panel5.Controls.Add(pictureBox2);
-            panel5.Controls.Add(button2);
-            panel5.Controls.Add(comboBox1);
-            panel5.Controls.Add(panel10);
-            panel5.Controls.Add(textBox6);
-            panel5.Controls.Add(panel8);
-            panel5.Controls.Add(textBox4);
-            panel5.Controls.Add(panel7);
-            panel5.Controls.Add(textBox3);
-            panel5.Controls.Add(panel6);
-            panel5.Controls.Add(textBox2);
-            panel5.Controls.Add(label5);
-            panel5.Controls.Add(label4);
-            panel5.Controls.Add(label3);
-            panel5.Controls.Add(label2);
-            panel5.Controls.Add(label1);
-            panel5.Controls.Add(menuStrip2);
-            panel5.Location = new Point(14, 3);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(565, 247);
-            panel5.TabIndex = 4;
-            panel5.Paint += panel5_Paint;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Solo Ventas(NO esta autrizado para manejar dinero)", "Cajero(SI esta autrizado para manejar dinero)", "Administrador(Control Total)" });
-            comboBox1.Location = new Point(199, 142);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(284, 29);
-            comboBox1.TabIndex = 9;
-            // 
-            // panel10
-            // 
-            panel10.BackColor = SystemColors.AppWorkspace;
-            panel10.Location = new Point(199, 25);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(201, 1);
-            panel10.TabIndex = 8;
-            // 
-            // textBox6
-            // 
-            textBox6.BorderStyle = BorderStyle.None;
-            textBox6.Location = new Point(199, 5);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(201, 22);
-            textBox6.TabIndex = 7;
-            // 
-            // panel8
-            // 
-            panel8.BackColor = SystemColors.AppWorkspace;
-            panel8.Location = new Point(199, 132);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(201, 1);
-            panel8.TabIndex = 8;
-            // 
-            // textBox4
-            // 
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Location = new Point(196, 111);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(201, 22);
-            textBox4.TabIndex = 7;
-            // 
-            // panel7
-            // 
-            panel7.BackColor = SystemColors.AppWorkspace;
-            panel7.Location = new Point(199, 87);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(201, 1);
-            panel7.TabIndex = 8;
-            // 
-            // textBox3
-            // 
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Location = new Point(199, 66);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(201, 22);
-            textBox3.TabIndex = 7;
-            // 
-            // panel6
-            // 
-            panel6.BackColor = SystemColors.AppWorkspace;
-            panel6.Location = new Point(199, 53);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(201, 1);
-            panel6.TabIndex = 6;
-            // 
-            // textBox2
-            // 
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Location = new Point(199, 33);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(201, 22);
-            textBox2.TabIndex = 5;
-            textBox2.TextChanged += textBox2_TextChanged;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(120, 145);
-            label5.Name = "label5";
-            label5.Size = new Size(36, 21);
-            label5.TabIndex = 4;
-            label5.Text = "Rol:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(15, 113);
-            label4.Name = "label4";
-            label4.Size = new Size(141, 21);
-            label4.TabIndex = 3;
-            label4.Text = "Correo Electronico:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(64, 67);
-            label3.Name = "label3";
-            label3.Size = new Size(92, 21);
-            label3.TabIndex = 2;
-            label3.Text = "Contraseña:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(89, 33);
-            label2.Name = "label2";
-            label2.Size = new Size(67, 21);
-            label2.TabIndex = 1;
-            label2.Text = "Usuario:";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 5);
-            label1.Name = "label1";
-            label1.Size = new Size(144, 21);
-            label1.TabIndex = 0;
-            label1.Text = "Nombre y Apellido:";
-            // 
-            // menuStrip2
-            // 
-            menuStrip2.AutoSize = false;
-            menuStrip2.BackColor = Color.FromArgb(0, 102, 103);
-            menuStrip2.Dock = DockStyle.None;
-            menuStrip2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            menuStrip2.Items.AddRange(new ToolStripItem[] { toolStripMenuItem2, toolStripMenuItem3, toolStripMenuItem4, toolStripMenuItem5 });
-            menuStrip2.Location = new Point(15, 190);
-            menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(311, 30);
-            menuStrip2.TabIndex = 10;
-            menuStrip2.Text = "menuStrip2";
-            // 
-            // toolStripMenuItem2
-            // 
-            toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(83, 26);
-            toolStripMenuItem2.Text = "Guardar";
-            // 
-            // toolStripMenuItem3
-            // 
-            toolStripMenuItem3.Name = "toolStripMenuItem3";
-            toolStripMenuItem3.Size = new Size(153, 26);
-            toolStripMenuItem3.Text = "Guardar Cambios";
-            // 
-            // toolStripMenuItem4
-            // 
-            toolStripMenuItem4.Name = "toolStripMenuItem4";
-            toolStripMenuItem4.Size = new Size(12, 26);
-            // 
-            // toolStripMenuItem5
-            // 
-            toolStripMenuItem5.Name = "toolStripMenuItem5";
-            toolStripMenuItem5.Size = new Size(12, 26);
-            // 
-            // button2
-            // 
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            button2.Location = new Point(370, 189);
-            button2.Name = "button2";
-            button2.Size = new Size(85, 31);
-            button2.TabIndex = 11;
-            button2.Text = "Volver";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            label6.BackColor = Color.FromArgb(0, 47, 45);
-            label6.Cursor = Cursors.Hand;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(418, 15);
-            label6.Name = "label6";
-            label6.Size = new Size(117, 111);
-            label6.TabIndex = 12;
-            label6.Text = "Elige un Icono";
-            label6.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Location = new Point(418, 15);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(117, 111);
-            pictureBox2.TabIndex = 13;
-            pictureBox2.TabStop = false;
-            // 
             // panelIcono
             // 
             panelIcono.BackColor = SystemColors.ControlDark;
@@ -493,6 +279,17 @@
             pictureBox6.TabIndex = 3;
             pictureBox6.TabStop = false;
             // 
+            // pictureBox11
+            // 
+            pictureBox11.Cursor = Cursors.Hand;
+            pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
+            pictureBox11.Location = new Point(22, 257);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(128, 107);
+            pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox11.TabIndex = 1;
+            pictureBox11.TabStop = false;
+            // 
             // flowLayoutPanel2
             // 
             flowLayoutPanel2.Controls.Add(pictureBox7);
@@ -545,16 +342,220 @@
             pictureBox10.TabIndex = 3;
             pictureBox10.TabStop = false;
             // 
-            // pictureBox11
+            // panel5
             // 
-            pictureBox11.Cursor = Cursors.Hand;
-            pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
-            pictureBox11.Location = new Point(22, 257);
-            pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(128, 107);
-            pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox11.TabIndex = 1;
-            pictureBox11.TabStop = false;
+            panel5.BackColor = SystemColors.ButtonHighlight;
+            panel5.Controls.Add(lblEligeIcon);
+            panel5.Controls.Add(pcbIcon);
+            panel5.Controls.Add(btnVolver);
+            panel5.Controls.Add(cmRol);
+            panel5.Controls.Add(panel10);
+            panel5.Controls.Add(txtNombre);
+            panel5.Controls.Add(panel8);
+            panel5.Controls.Add(txtEmail);
+            panel5.Controls.Add(panel7);
+            panel5.Controls.Add(txtContra);
+            panel5.Controls.Add(panel6);
+            panel5.Controls.Add(txtUser);
+            panel5.Controls.Add(label5);
+            panel5.Controls.Add(label4);
+            panel5.Controls.Add(label3);
+            panel5.Controls.Add(label2);
+            panel5.Controls.Add(label1);
+            panel5.Controls.Add(menuStrip2);
+            panel5.Location = new Point(14, 3);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(565, 247);
+            panel5.TabIndex = 4;
+            panel5.Paint += panel5_Paint;
+            // 
+            // lblEligeIcon
+            // 
+            lblEligeIcon.BackColor = Color.FromArgb(0, 47, 45);
+            lblEligeIcon.Cursor = Cursors.Hand;
+            lblEligeIcon.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblEligeIcon.ForeColor = Color.White;
+            lblEligeIcon.Location = new Point(418, 15);
+            lblEligeIcon.Name = "lblEligeIcon";
+            lblEligeIcon.Size = new Size(117, 111);
+            lblEligeIcon.TabIndex = 12;
+            lblEligeIcon.Text = "Elige un Icono";
+            lblEligeIcon.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // pcbIcon
+            // 
+            pcbIcon.Location = new Point(418, 15);
+            pcbIcon.Name = "pcbIcon";
+            pcbIcon.Size = new Size(117, 111);
+            pcbIcon.TabIndex = 13;
+            pcbIcon.TabStop = false;
+            // 
+            // btnVolver
+            // 
+            btnVolver.FlatAppearance.BorderSize = 0;
+            btnVolver.FlatStyle = FlatStyle.Flat;
+            btnVolver.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnVolver.Location = new Point(370, 189);
+            btnVolver.Name = "btnVolver";
+            btnVolver.Size = new Size(85, 31);
+            btnVolver.TabIndex = 11;
+            btnVolver.Text = "Volver";
+            btnVolver.UseVisualStyleBackColor = true;
+            // 
+            // cmRol
+            // 
+            cmRol.FormattingEnabled = true;
+            cmRol.Items.AddRange(new object[] { "Solo Ventas(NO esta autrizado para manejar dinero)", "Cajero(SI esta autrizado para manejar dinero)", "Administrador(Control Total)" });
+            cmRol.Location = new Point(199, 142);
+            cmRol.Name = "cmRol";
+            cmRol.Size = new Size(284, 29);
+            cmRol.TabIndex = 9;
+            // 
+            // panel10
+            // 
+            panel10.BackColor = SystemColors.AppWorkspace;
+            panel10.Location = new Point(199, 25);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(201, 1);
+            panel10.TabIndex = 8;
+            // 
+            // txtNombre
+            // 
+            txtNombre.BorderStyle = BorderStyle.None;
+            txtNombre.Location = new Point(199, 5);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(201, 22);
+            txtNombre.TabIndex = 7;
+            // 
+            // panel8
+            // 
+            panel8.BackColor = SystemColors.AppWorkspace;
+            panel8.Location = new Point(199, 132);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(201, 1);
+            panel8.TabIndex = 8;
+            // 
+            // txtEmail
+            // 
+            txtEmail.BorderStyle = BorderStyle.None;
+            txtEmail.Location = new Point(196, 111);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(201, 22);
+            txtEmail.TabIndex = 7;
+            // 
+            // panel7
+            // 
+            panel7.BackColor = SystemColors.AppWorkspace;
+            panel7.Location = new Point(199, 87);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(201, 1);
+            panel7.TabIndex = 8;
+            // 
+            // txtContra
+            // 
+            txtContra.BorderStyle = BorderStyle.None;
+            txtContra.Location = new Point(199, 66);
+            txtContra.Name = "txtContra";
+            txtContra.Size = new Size(201, 22);
+            txtContra.TabIndex = 7;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = SystemColors.AppWorkspace;
+            panel6.Location = new Point(199, 53);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(201, 1);
+            panel6.TabIndex = 6;
+            // 
+            // txtUser
+            // 
+            txtUser.BorderStyle = BorderStyle.None;
+            txtUser.Location = new Point(199, 33);
+            txtUser.Name = "txtUser";
+            txtUser.Size = new Size(201, 22);
+            txtUser.TabIndex = 5;
+            txtUser.TextChanged += textBox2_TextChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(120, 145);
+            label5.Name = "label5";
+            label5.Size = new Size(36, 21);
+            label5.TabIndex = 4;
+            label5.Text = "Rol:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(15, 113);
+            label4.Name = "label4";
+            label4.Size = new Size(141, 21);
+            label4.TabIndex = 3;
+            label4.Text = "Correo Electronico:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(64, 67);
+            label3.Name = "label3";
+            label3.Size = new Size(92, 21);
+            label3.TabIndex = 2;
+            label3.Text = "Contraseña:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(89, 33);
+            label2.Name = "label2";
+            label2.Size = new Size(67, 21);
+            label2.TabIndex = 1;
+            label2.Text = "Usuario:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 5);
+            label1.Name = "label1";
+            label1.Size = new Size(144, 21);
+            label1.TabIndex = 0;
+            label1.Text = "Nombre y Apellido:";
+            // 
+            // menuStrip2
+            // 
+            menuStrip2.AutoSize = false;
+            menuStrip2.BackColor = Color.FromArgb(0, 102, 103);
+            menuStrip2.Dock = DockStyle.None;
+            menuStrip2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            menuStrip2.Items.AddRange(new ToolStripItem[] { btnGuardar, btnGuardarCambio, toolStripMenuItem4, toolStripMenuItem5 });
+            menuStrip2.Location = new Point(15, 190);
+            menuStrip2.Name = "menuStrip2";
+            menuStrip2.Size = new Size(311, 30);
+            menuStrip2.TabIndex = 10;
+            menuStrip2.Text = "menuStrip2";
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(83, 26);
+            btnGuardar.Text = "Guardar";
+            btnGuardar.Click += btnGuardar_Click;
+            // 
+            // btnGuardarCambio
+            // 
+            btnGuardarCambio.Name = "btnGuardarCambio";
+            btnGuardarCambio.Size = new Size(153, 26);
+            btnGuardarCambio.Text = "Guardar Cambios";
+            // 
+            // toolStripMenuItem4
+            // 
+            toolStripMenuItem4.Name = "toolStripMenuItem4";
+            toolStripMenuItem4.Size = new Size(12, 26);
+            // 
+            // toolStripMenuItem5
+            // 
+            toolStripMenuItem5.Name = "toolStripMenuItem5";
+            toolStripMenuItem5.Size = new Size(12, 26);
             // 
             // UsuariosOK
             // 
@@ -579,23 +580,23 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel4.ResumeLayout(false);
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            menuStrip2.ResumeLayout(false);
-            menuStrip2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panelIcono.ResumeLayout(false);
             flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             flowLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pcbIcon).EndInit();
+            menuStrip2.ResumeLayout(false);
+            menuStrip2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -618,23 +619,23 @@
         private Label label2;
         private Label label1;
         private Panel panel6;
-        private TextBox textBox2;
+        private TextBox txtUser;
         private Label label5;
         private Panel panel8;
-        private TextBox textBox4;
+        private TextBox txtEmail;
         private Panel panel7;
-        private TextBox textBox3;
-        private ComboBox comboBox1;
+        private TextBox txtContra;
+        private ComboBox cmRol;
         private Panel panel10;
-        private TextBox textBox6;
+        private TextBox txtNombre;
         private MenuStrip menuStrip2;
-        private ToolStripMenuItem toolStripMenuItem2;
-        private ToolStripMenuItem toolStripMenuItem3;
+        private ToolStripMenuItem btnGuardar;
+        private ToolStripMenuItem btnGuardarCambio;
         private ToolStripMenuItem toolStripMenuItem4;
         private ToolStripMenuItem toolStripMenuItem5;
-        private Button button2;
-        private Label label6;
-        private PictureBox pictureBox2;
+        private Button btnVolver;
+        private Label lblEligeIcon;
+        private PictureBox pcbIcon;
         private Panel panelIcono;
         private FlowLayoutPanel flowLayoutPanel1;
         private PictureBox pictureBox3;
