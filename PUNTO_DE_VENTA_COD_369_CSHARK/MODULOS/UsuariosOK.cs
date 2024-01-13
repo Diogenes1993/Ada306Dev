@@ -124,6 +124,7 @@ namespace PUNTO_DE_VENTA_COD_369_CSHARK
 
                     cmd.Parameters.AddWithValue("@correo", txtEmail.Text);
                     cmd.Parameters.AddWithValue("@rol", cmRol.Text);
+                    cmd.Parameters.AddWithValue("@estado", "ACTIVO");
 
                     System.IO.MemoryStream memorybyte = new System.IO.MemoryStream();
                     pcbIcon.Image.Save(memorybyte, pcbIcon.Image.RawFormat);
@@ -230,7 +231,7 @@ namespace PUNTO_DE_VENTA_COD_369_CSHARK
 
         private void tblContent_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            id = tblContent.SelectedCells[1].Value.ToString();
+             id = tblContent.SelectedCells[1].Value.ToString();
             txtNombre.Text = tblContent.SelectedCells[2].Value.ToString();
             txtUser.Text = tblContent.SelectedCells[3].Value.ToString();
             txtContra.Text = tblContent.SelectedCells[4].Value.ToString();
@@ -300,6 +301,44 @@ namespace PUNTO_DE_VENTA_COD_369_CSHARK
         private void pcbIcon_Click(object sender, EventArgs e)
         {
             panelIcono.Visible = true;
+        }
+
+        private void tblContent_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == this.tblContent.Columns["Delete"].Index)
+            {
+                DialogResult resul;
+                resul = MessageBox.Show("¿Realmente desea eliminar este Usuario?","Eliminando Registro",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+                if(resul == DialogResult.OK)
+                {
+                    try
+                    {
+                        foreach(DataGridViewRow row in tblContent.SelectedRows)
+                        {
+                            int onekey = Convert.ToInt32(row.Cells["idUsuario"].Value);
+                            string user = Convert.ToString(row.Cells["Login"].Value);
+
+                            SqlConnection conex = new SqlConnection();
+                            conex.ConnectionString = ConexionBD.conexion;
+                            conex.Open();
+                            SqlCommand cmd = new SqlCommand("eliminar_usuario", conex);
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@idusuario", onekey);
+                            cmd.Parameters.AddWithValue("@login", user);
+                            cmd.ExecuteNonQuery();
+                            conex.Close();
+                            mostrar();
+                        }
+                        
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                 
+
+            }
         }
     }
 }

@@ -182,7 +182,7 @@
             panelIcono.Controls.Add(flowLayoutPanel2);
             panelIcono.Location = new Point(0, 0);
             panelIcono.Name = "panelIcono";
-            panelIcono.Size = new Size(797, 508);
+            panelIcono.Size = new Size(800, 508);
             panelIcono.TabIndex = 5;
             // 
             // flowLayoutPanel1
@@ -339,8 +339,9 @@
             tblContent.Name = "tblContent";
             tblContent.RowHeadersVisible = false;
             tblContent.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            tblContent.Size = new Size(800, 452);
+            tblContent.Size = new Size(657, 452);
             tblContent.TabIndex = 3;
+            tblContent.CellClick += tblContent_CellClick;
             tblContent.CellDoubleClick += tblContent_CellDoubleClick;
             // 
             // Delete
@@ -590,8 +591,8 @@
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(800, 564);
             Controls.Add(panelcontainerdata);
-            Controls.Add(panelviewdata);
             Controls.Add(tblContent);
+            Controls.Add(panelviewdata);
             Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
