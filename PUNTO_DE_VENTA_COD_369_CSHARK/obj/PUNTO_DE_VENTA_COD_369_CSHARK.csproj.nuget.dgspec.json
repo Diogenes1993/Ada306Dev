@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DevioZ-Mark-01\\Downloads\\GIT\\PUNTO_DE_VENTA_COD_369_CSHARK\\PUNTO_DE_VENTA_COD_369_CSHARK.csproj": {}
+    "C:\\Users\\MK-12\\Downloads\\esobrad\\GIT\\Ada306Dev\\PUNTO_DE_VENTA_COD_369_CSHARK\\PUNTO_DE_VENTA_COD_369_CSHARK.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DevioZ-Mark-01\\Downloads\\GIT\\PUNTO_DE_VENTA_COD_369_CSHARK\\PUNTO_DE_VENTA_COD_369_CSHARK.csproj": {
+    "C:\\Users\\MK-12\\Downloads\\esobrad\\GIT\\Ada306Dev\\PUNTO_DE_VENTA_COD_369_CSHARK\\PUNTO_DE_VENTA_COD_369_CSHARK.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DevioZ-Mark-01\\Downloads\\GIT\\PUNTO_DE_VENTA_COD_369_CSHARK\\PUNTO_DE_VENTA_COD_369_CSHARK.csproj",
+        "projectUniqueName": "C:\\Users\\MK-12\\Downloads\\esobrad\\GIT\\Ada306Dev\\PUNTO_DE_VENTA_COD_369_CSHARK\\PUNTO_DE_VENTA_COD_369_CSHARK.csproj",
         "projectName": "PUNTO_DE_VENTA_COD_369_CSHARK",
-        "projectPath": "C:\\Users\\DevioZ-Mark-01\\Downloads\\GIT\\PUNTO_DE_VENTA_COD_369_CSHARK\\PUNTO_DE_VENTA_COD_369_CSHARK.csproj",
-        "packagesPath": "C:\\Users\\DevioZ-Mark-01\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DevioZ-Mark-01\\Downloads\\GIT\\PUNTO_DE_VENTA_COD_369_CSHARK\\obj\\",
+        "projectPath": "C:\\Users\\MK-12\\Downloads\\esobrad\\GIT\\Ada306Dev\\PUNTO_DE_VENTA_COD_369_CSHARK\\PUNTO_DE_VENTA_COD_369_CSHARK.csproj",
+        "packagesPath": "C:\\Users\\MK-12\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MK-12\\Downloads\\esobrad\\GIT\\Ada306Dev\\PUNTO_DE_VENTA_COD_369_CSHARK\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\DevioZ-Mark-01\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MK-12\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

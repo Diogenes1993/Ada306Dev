@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\DevioZ-Mark-01\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\DevioZ-Mark-01\\.nuget\\packages"
+      "C:\\Users\\MK-12\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\MK-12\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,

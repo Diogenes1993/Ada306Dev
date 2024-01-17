@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PUNTO_DE_VENTA_COD_369_CSHARK")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9ab0106a5f955805c5739da5cd8a88de98eaf7d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38a627582faa60a796481b4c194506594ba4e1d8")]
 [assembly: System.Reflection.AssemblyProductAttribute("PUNTO_DE_VENTA_COD_369_CSHARK")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PUNTO_DE_VENTA_COD_369_CSHARK")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

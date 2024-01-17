@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.DirectoryServices.ActiveDirectory;
+using System.Text.RegularExpressions;
 
 namespace PUNTO_DE_VENTA_COD_369_CSHARK
 {
@@ -81,11 +82,17 @@ namespace PUNTO_DE_VENTA_COD_369_CSHARK
 
                 panelcontainerdata.Visible = false;
             }
+
+            
             catch (Exception ex)
             {
                 MessageBox.Show("Error " + ex);
             }
+
+            CONEXIONLOG.Utilidades.Multiplayer(ref tblContent);
         }
+
+
 
         private void estadPanelIcon(Boolean estado)
         {
@@ -99,6 +106,66 @@ namespace PUNTO_DE_VENTA_COD_369_CSHARK
             panelviewdata.Visible = activo;
         }
 
+        public bool validar_Email(string email)
+        {
+            return Regex.IsMatch(email, @"^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$");
+        }
+
+        private void cargar_Estado_Icono()
+        {
+            try
+            {
+                foreach (DataGridViewRow row in tblContent.Rows)
+                {
+                    try
+                    {
+                        string icono = Convert.ToString(row.Cells["Nombre_de_Icono"].Value);
+
+                        if (icono == "1")
+                        {
+                            pcbmuestra1.Visible = false;
+                        }
+                        if (icono == "2")
+                        {
+                            pcbmuestra2.Visible = false;
+                        }
+                        if (icono == "3")
+                        {
+                            pcbmuestra3.Visible = false;
+                        }
+                        if (icono == "4")
+                        {
+                            pcbmuestra4.Visible = false;
+                        }
+                        if (icono == "5")
+                        {
+                            pcbmuestra5.Visible = false;
+                        }
+                        if (icono == "6")
+                        {
+                            pcbmuestra6.Visible = false;
+                        }
+                        if (icono == "7")
+                        {
+                            pcbmuestra7.Visible = false;
+                        }
+                        if (icono == "8")
+                        {
+                            pcbmuestra8.Visible = false;
+                        }
+
+                    }
+                    catch (Exception ex) { }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+
+
         #endregion
 
         #region Variables privadas 
@@ -109,37 +176,47 @@ namespace PUNTO_DE_VENTA_COD_369_CSHARK
         #endregion
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text != "")
+            if (validar_Email(txtEmail.Text) == false)
             {
-                try
+                MessageBox.Show("Direccion de correo electronico no valido");
+                txtEmail.Focus();
+                txtEmail.SelectAll();
+            }
+            else
+            {
+
+                if (txtNombre.Text != "")
                 {
-                    SqlConnection conex = new SqlConnection();
-                    conex.ConnectionString = ConexionBD.conexion;
-                    conex.Open();
-                    SqlCommand cmd = new SqlCommand("insertar_usuario", conex);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@nombre", txtNombre.Text);
-                    cmd.Parameters.AddWithValue("@login", txtUser.Text);
-                    cmd.Parameters.AddWithValue("@pass", txtContra.Text);
+                    try
+                    {
+                        SqlConnection conex = new SqlConnection();
+                        conex.ConnectionString = ConexionBD.conexion;
+                        conex.Open();
+                        SqlCommand cmd = new SqlCommand("insertar_usuario", conex);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@nombre", txtNombre.Text);
+                        cmd.Parameters.AddWithValue("@login", txtUser.Text);
+                        cmd.Parameters.AddWithValue("@pass", txtContra.Text);
 
-                    cmd.Parameters.AddWithValue("@correo", txtEmail.Text);
-                    cmd.Parameters.AddWithValue("@rol", cmRol.Text);
-                    cmd.Parameters.AddWithValue("@estado", "ACTIVO");
+                        cmd.Parameters.AddWithValue("@correo", txtEmail.Text);
+                        cmd.Parameters.AddWithValue("@rol", cmRol.Text);
+                        cmd.Parameters.AddWithValue("@estado", "ACTIVO");
 
-                    System.IO.MemoryStream memorybyte = new System.IO.MemoryStream();
-                    pcbIcon.Image.Save(memorybyte, pcbIcon.Image.RawFormat);
+                        System.IO.MemoryStream memorybyte = new System.IO.MemoryStream();
+                        pcbIcon.Image.Save(memorybyte, pcbIcon.Image.RawFormat);
 
-                    cmd.Parameters.AddWithValue("@icono", memorybyte.GetBuffer());
-                    cmd.Parameters.AddWithValue("@nombre_icono", nombre_icon);
-                    cmd.ExecuteNonQuery();
-                    conex.Close();
-                    mostrar();
+                        cmd.Parameters.AddWithValue("@icono", memorybyte.GetBuffer());
+                        cmd.Parameters.AddWithValue("@nombre_icono", nombre_icon);
+                        cmd.ExecuteNonQuery();
+                        conex.Close();
+                        mostrar();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-
             }
         }
 
@@ -159,6 +236,7 @@ namespace PUNTO_DE_VENTA_COD_369_CSHARK
         private void lblEligeIcon_Click(object sender, EventArgs e)
         {
             panelIcono.Visible = true;
+            cargar_Estado_Icono();
 
         }
 
@@ -231,7 +309,7 @@ namespace PUNTO_DE_VENTA_COD_369_CSHARK
 
         private void tblContent_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-             id = tblContent.SelectedCells[1].Value.ToString();
+            id = tblContent.SelectedCells[1].Value.ToString();
             txtNombre.Text = tblContent.SelectedCells[2].Value.ToString();
             txtUser.Text = tblContent.SelectedCells[3].Value.ToString();
             txtContra.Text = tblContent.SelectedCells[4].Value.ToString();
@@ -308,12 +386,12 @@ namespace PUNTO_DE_VENTA_COD_369_CSHARK
             if (e.ColumnIndex == this.tblContent.Columns["Delete"].Index)
             {
                 DialogResult resul;
-                resul = MessageBox.Show("¿Realmente desea eliminar este Usuario?","Eliminando Registro",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
-                if(resul == DialogResult.OK)
+                resul = MessageBox.Show("¿Realmente desea eliminar este Usuario?", "Eliminando Registro", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (resul == DialogResult.OK)
                 {
                     try
                     {
-                        foreach(DataGridViewRow row in tblContent.SelectedRows)
+                        foreach (DataGridViewRow row in tblContent.SelectedRows)
                         {
                             int onekey = Convert.ToInt32(row.Cells["idUsuario"].Value);
                             string user = Convert.ToString(row.Cells["Login"].Value);
@@ -329,16 +407,35 @@ namespace PUNTO_DE_VENTA_COD_369_CSHARK
                             conex.Close();
                             mostrar();
                         }
-                        
+
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message);
                     }
                 }
-                 
+
 
             }
         }
+
+        private void pcbseleccion_Click(object sender, EventArgs e)
+        {
+            DialogFile.InitialDirectory = "";
+            DialogFile.Filter = "Imagenes|*.jpg;*.png";
+            DialogFile.FilterIndex = 2;
+            DialogFile.Title = "Cargador de Imagenes";
+            if (DialogFile.ShowDialog() == DialogResult.OK)
+            {
+                pcbIcon.BackgroundImage = null;
+                pcbIcon.Image = new Bitmap(DialogFile.FileName);
+                pcbIcon.SizeMode = PictureBoxSizeMode.Zoom;
+                nombre_icon=Path.GetFileName(DialogFile.FileName);
+                lblEligeIcon.Visible = false;
+                panelIcono.Visible = false;
+    }
+        }
     }
 }
+
+            

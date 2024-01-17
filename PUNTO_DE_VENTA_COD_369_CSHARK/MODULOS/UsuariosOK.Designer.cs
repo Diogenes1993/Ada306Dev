@@ -33,7 +33,7 @@
             button1 = new Button();
             lblUsuario = new Label();
             panel2 = new Panel();
-            textBox1 = new TextBox();
+            txtBuscar = new TextBox();
             menuStrip1 = new MenuStrip();
             toolStripMenuItem1 = new ToolStripMenuItem();
             panelIcono = new Panel();
@@ -54,6 +54,7 @@
             Delete = new DataGridViewImageColumn();
             panelcontainerdata = new Panel();
             panel5 = new Panel();
+            label6 = new Label();
             lblEligeIcon = new Label();
             pcbIcon = new PictureBox();
             btnVolver = new Button();
@@ -76,6 +77,7 @@
             btnGuardarCambio = new ToolStripMenuItem();
             toolStripMenuItem4 = new ToolStripMenuItem();
             toolStripMenuItem5 = new ToolStripMenuItem();
+            DialogFile = new OpenFileDialog();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             menuStrip1.SuspendLayout();
@@ -139,7 +141,7 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(txtBuscar);
             panel2.Controls.Add(menuStrip1);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 56);
@@ -147,14 +149,14 @@
             panel2.Size = new Size(800, 56);
             panel2.TabIndex = 1;
             // 
-            // textBox1
+            // txtBuscar
             // 
-            textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(56, 19);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(362, 29);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txtBuscar.Font = new Font("Segoe UI", 12F);
+            txtBuscar.Location = new Point(56, 19);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.Size = new Size(362, 29);
+            txtBuscar.TabIndex = 0;
+            txtBuscar.TextChanged += textBox1_TextChanged;
             // 
             // menuStrip1
             // 
@@ -180,9 +182,9 @@
             panelIcono.Controls.Add(flowLayoutPanel1);
             panelIcono.Controls.Add(pcbseleccion);
             panelIcono.Controls.Add(flowLayoutPanel2);
-            panelIcono.Location = new Point(0, 0);
+            panelIcono.Location = new Point(0, 112);
             panelIcono.Name = "panelIcono";
-            panelIcono.Size = new Size(800, 508);
+            panelIcono.Size = new Size(800, 396);
             panelIcono.TabIndex = 5;
             // 
             // flowLayoutPanel1
@@ -250,6 +252,7 @@
             pcbseleccion.SizeMode = PictureBoxSizeMode.Zoom;
             pcbseleccion.TabIndex = 1;
             pcbseleccion.TabStop = false;
+            pcbseleccion.Click += pcbseleccion_Click;
             // 
             // flowLayoutPanel2
             // 
@@ -332,12 +335,20 @@
             tblContent.AllowUserToAddRows = false;
             tblContent.AllowUserToResizeRows = false;
             tblContent.BackgroundColor = Color.White;
+            tblContent.BorderStyle = BorderStyle.None;
+            tblContent.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            tblContent.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             tblContent.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tblContent.Columns.AddRange(new DataGridViewColumn[] { Delete });
             tblContent.Dock = DockStyle.Fill;
+            tblContent.EnableHeadersVisualStyles = false;
             tblContent.Location = new Point(0, 112);
             tblContent.Name = "tblContent";
             tblContent.RowHeadersVisible = false;
+            tblContent.RowTemplate.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tblContent.RowTemplate.DefaultCellStyle.SelectionBackColor = Color.FromArgb(224, 224, 224);
+            tblContent.RowTemplate.DefaultCellStyle.SelectionForeColor = Color.Black;
+            tblContent.RowTemplate.Height = 30;
             tblContent.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             tblContent.Size = new Size(657, 452);
             tblContent.TabIndex = 3;
@@ -357,15 +368,16 @@
             panelcontainerdata.Controls.Add(panelIcono);
             panelcontainerdata.Controls.Add(panel5);
             panelcontainerdata.Font = new Font("Segoe UI", 12F);
-            panelcontainerdata.Location = new Point(0, 56);
+            panelcontainerdata.Location = new Point(0, 135);
             panelcontainerdata.Name = "panelcontainerdata";
-            panelcontainerdata.Size = new Size(800, 508);
+            panelcontainerdata.Size = new Size(761, 429);
             panelcontainerdata.TabIndex = 1;
             panelcontainerdata.Paint += panel4_Paint;
             // 
             // panel5
             // 
             panel5.BackColor = SystemColors.ButtonHighlight;
+            panel5.Controls.Add(label6);
             panel5.Controls.Add(lblEligeIcon);
             panel5.Controls.Add(pcbIcon);
             panel5.Controls.Add(btnVolver);
@@ -389,6 +401,16 @@
             panel5.Size = new Size(549, 260);
             panel5.TabIndex = 4;
             panel5.Paint += panel5_Paint;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.ForeColor = SystemColors.AppWorkspace;
+            label6.Location = new Point(198, 129);
+            label6.Name = "label6";
+            label6.Size = new Size(265, 21);
+            label6.TabIndex = 14;
+            label6.Text = "Servira para recuperar su contraseña";
             // 
             // lblEligeIcon
             // 
@@ -432,7 +454,7 @@
             cmRol.DropDownStyle = ComboBoxStyle.DropDownList;
             cmRol.FormattingEnabled = true;
             cmRol.Items.AddRange(new object[] { "Solo Ventas(NO esta autrizado para manejar dinero)", "Cajero(SI esta autrizado para manejar dinero)", "Administrador(Control Total)" });
-            cmRol.Location = new Point(199, 142);
+            cmRol.Location = new Point(197, 154);
             cmRol.Name = "cmRol";
             cmRol.Size = new Size(227, 29);
             cmRol.TabIndex = 9;
@@ -456,7 +478,7 @@
             // panel8
             // 
             panel8.BackColor = SystemColors.AppWorkspace;
-            panel8.Location = new Point(199, 132);
+            panel8.Location = new Point(199, 123);
             panel8.Name = "panel8";
             panel8.Size = new Size(201, 1);
             panel8.TabIndex = 8;
@@ -464,7 +486,7 @@
             // txtEmail
             // 
             txtEmail.BorderStyle = BorderStyle.None;
-            txtEmail.Location = new Point(196, 111);
+            txtEmail.Location = new Point(196, 104);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(201, 22);
             txtEmail.TabIndex = 7;
@@ -505,7 +527,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(120, 145);
+            label5.Location = new Point(120, 158);
             label5.Name = "label5";
             label5.Size = new Size(36, 21);
             label5.TabIndex = 4;
@@ -514,7 +536,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(15, 113);
+            label4.Location = new Point(15, 100);
             label4.Name = "label4";
             label4.Size = new Size(141, 21);
             label4.TabIndex = 3;
@@ -584,6 +606,10 @@
             toolStripMenuItem5.Name = "toolStripMenuItem5";
             toolStripMenuItem5.Size = new Size(12, 26);
             // 
+            // DialogFile
+            // 
+            DialogFile.FileName = "openFileDialog1";
+            // 
             // UsuariosOK
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -635,7 +661,7 @@
         private Label lblUsuario;
         private Button button1;
         private Panel panel2;
-        private TextBox textBox1;
+        private TextBox txtBuscar;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem toolStripMenuItem1;
         private Panel panelviewdata;
@@ -678,5 +704,7 @@
         private PictureBox pcbmuestra8;
         private PictureBox pcbseleccion;
         private DataGridViewImageColumn Delete;
+        private Label label6;
+        private OpenFileDialog DialogFile;
     }
 }
