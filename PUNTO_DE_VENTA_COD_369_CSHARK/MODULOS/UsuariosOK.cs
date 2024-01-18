@@ -20,31 +20,25 @@ namespace PUNTO_DE_VENTA_COD_369_CSHARK
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         #region Metodos no vinculados a un control
+
+        private void AccessData(System.Windows.Forms.TextBox CajaText, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
         private void reinicio()
         {
             id = "";
@@ -83,7 +77,7 @@ namespace PUNTO_DE_VENTA_COD_369_CSHARK
                 panelcontainerdata.Visible = false;
             }
 
-            
+
             catch (Exception ex)
             {
                 MessageBox.Show("Error " + ex);
@@ -92,6 +86,39 @@ namespace PUNTO_DE_VENTA_COD_369_CSHARK
             CONEXIONLOG.Utilidades.Multiplayer(ref tblContent);
         }
 
+
+        private void mostrarBusqueda()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlDataAdapter da;
+                SqlConnection conex = new SqlConnection();
+                conex.ConnectionString = ConexionBD.conexion;
+                conex.Open();
+                da = new SqlDataAdapter("buscar_usuario", conex);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.AddWithValue("@letra", txtBuscar.Text);
+                da.Fill(dt);
+                tblContent.DataSource = dt;
+                conex.Close();
+                tblContent.Columns[1].Visible = false;
+                tblContent.Columns[5].Visible = false;
+                tblContent.Columns[6].Visible = false;
+                tblContent.Columns[7].Visible = false;
+                tblContent.Columns[8].Visible = false;
+
+                panelcontainerdata.Visible = false;
+            }
+
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex);
+            }
+
+            CONEXIONLOG.Utilidades.Multiplayer(ref tblContent);
+        }
 
 
         private void estadPanelIcon(Boolean estado)
@@ -225,9 +252,7 @@ namespace PUNTO_DE_VENTA_COD_369_CSHARK
 
         private void pcbmuestra1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Mensaje pasando");
             pcbIcon.Image = pcbmuestra1.Image;
-            MessageBox.Show("Mensaje pasado");
             nombre_icon = "1";
             estadPanelIcon(false);
 
@@ -378,7 +403,9 @@ namespace PUNTO_DE_VENTA_COD_369_CSHARK
 
         private void pcbIcon_Click(object sender, EventArgs e)
         {
+            cargar_Estado_Icono();
             panelIcono.Visible = true;
+
         }
 
         private void tblContent_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -430,10 +457,25 @@ namespace PUNTO_DE_VENTA_COD_369_CSHARK
                 pcbIcon.BackgroundImage = null;
                 pcbIcon.Image = new Bitmap(DialogFile.FileName);
                 pcbIcon.SizeMode = PictureBoxSizeMode.Zoom;
-                nombre_icon=Path.GetFileName(DialogFile.FileName);
+                nombre_icon = Path.GetFileName(DialogFile.FileName);
                 lblEligeIcon.Visible = false;
                 panelIcono.Visible = false;
-    }
+            }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            mostrarBusqueda();
+        }
+
+        private void txtContra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            AccessData(txtBuscar, e);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

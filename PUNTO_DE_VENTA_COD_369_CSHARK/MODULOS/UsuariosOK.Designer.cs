@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsuariosOK));
             panel1 = new Panel();
-            button1 = new Button();
+            btnClose = new Button();
             lblUsuario = new Label();
             panel2 = new Panel();
             txtBuscar = new TextBox();
@@ -105,7 +105,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(0, 102, 103);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnClose);
             panel1.Controls.Add(lblUsuario);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -113,18 +113,19 @@
             panel1.Size = new Size(800, 56);
             panel1.TabIndex = 0;
             // 
-            // button1
+            // btnClose
             // 
-            button1.Dock = DockStyle.Right;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI Historic", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(716, 0);
-            button1.Name = "button1";
-            button1.Size = new Size(84, 56);
-            button1.TabIndex = 1;
-            button1.Text = "X";
-            button1.UseVisualStyleBackColor = true;
+            btnClose.Dock = DockStyle.Right;
+            btnClose.FlatAppearance.BorderSize = 0;
+            btnClose.FlatStyle = FlatStyle.Flat;
+            btnClose.Font = new Font("Segoe UI Historic", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClose.Location = new Point(716, 0);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(84, 56);
+            btnClose.TabIndex = 1;
+            btnClose.Text = "X";
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
             // 
             // lblUsuario
             // 
@@ -156,7 +157,7 @@
             txtBuscar.Name = "txtBuscar";
             txtBuscar.Size = new Size(362, 29);
             txtBuscar.TabIndex = 0;
-            txtBuscar.TextChanged += textBox1_TextChanged;
+            txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // menuStrip1
             // 
@@ -182,9 +183,9 @@
             panelIcono.Controls.Add(flowLayoutPanel1);
             panelIcono.Controls.Add(pcbseleccion);
             panelIcono.Controls.Add(flowLayoutPanel2);
-            panelIcono.Location = new Point(0, 112);
+            panelIcono.Location = new Point(0, 316);
             panelIcono.Name = "panelIcono";
-            panelIcono.Size = new Size(800, 396);
+            panelIcono.Size = new Size(720, 192);
             panelIcono.TabIndex = 5;
             // 
             // flowLayoutPanel1
@@ -344,6 +345,7 @@
             tblContent.EnableHeadersVisualStyles = false;
             tblContent.Location = new Point(0, 112);
             tblContent.Name = "tblContent";
+            tblContent.ReadOnly = true;
             tblContent.RowHeadersVisible = false;
             tblContent.RowTemplate.DefaultCellStyle.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tblContent.RowTemplate.DefaultCellStyle.SelectionBackColor = Color.FromArgb(224, 224, 224);
@@ -361,6 +363,7 @@
             Delete.Image = (Image)resources.GetObject("Delete.Image");
             Delete.ImageLayout = DataGridViewImageCellLayout.Zoom;
             Delete.Name = "Delete";
+            Delete.ReadOnly = true;
             // 
             // panelcontainerdata
             // 
@@ -368,11 +371,10 @@
             panelcontainerdata.Controls.Add(panelIcono);
             panelcontainerdata.Controls.Add(panel5);
             panelcontainerdata.Font = new Font("Segoe UI", 12F);
-            panelcontainerdata.Location = new Point(0, 135);
+            panelcontainerdata.Location = new Point(0, 56);
             panelcontainerdata.Name = "panelcontainerdata";
-            panelcontainerdata.Size = new Size(761, 429);
+            panelcontainerdata.Size = new Size(800, 508);
             panelcontainerdata.TabIndex = 1;
-            panelcontainerdata.Paint += panel4_Paint;
             // 
             // panel5
             // 
@@ -396,11 +398,10 @@
             panel5.Controls.Add(label2);
             panel5.Controls.Add(label1);
             panel5.Controls.Add(menuStrip2);
-            panel5.Location = new Point(89, 59);
+            panel5.Location = new Point(89, 49);
             panel5.Name = "panel5";
-            panel5.Size = new Size(549, 260);
+            panel5.Size = new Size(620, 242);
             panel5.TabIndex = 4;
-            panel5.Paint += panel5_Paint;
             // 
             // label6
             // 
@@ -418,7 +419,7 @@
             lblEligeIcon.Cursor = Cursors.Hand;
             lblEligeIcon.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblEligeIcon.ForeColor = Color.White;
-            lblEligeIcon.Location = new Point(418, 15);
+            lblEligeIcon.Location = new Point(490, 13);
             lblEligeIcon.Name = "lblEligeIcon";
             lblEligeIcon.Size = new Size(117, 111);
             lblEligeIcon.TabIndex = 12;
@@ -428,7 +429,8 @@
             // 
             // pcbIcon
             // 
-            pcbIcon.Location = new Point(418, 15);
+            pcbIcon.Cursor = Cursors.Hand;
+            pcbIcon.Location = new Point(490, 13);
             pcbIcon.Name = "pcbIcon";
             pcbIcon.Size = new Size(117, 111);
             pcbIcon.SizeMode = PictureBoxSizeMode.Zoom;
@@ -456,7 +458,7 @@
             cmRol.Items.AddRange(new object[] { "Solo Ventas(NO esta autrizado para manejar dinero)", "Cajero(SI esta autrizado para manejar dinero)", "Administrador(Control Total)" });
             cmRol.Location = new Point(197, 154);
             cmRol.Name = "cmRol";
-            cmRol.Size = new Size(227, 29);
+            cmRol.Size = new Size(410, 29);
             cmRol.TabIndex = 9;
             // 
             // panel10
@@ -472,7 +474,7 @@
             txtNombre.BorderStyle = BorderStyle.None;
             txtNombre.Location = new Point(199, 0);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(201, 22);
+            txtNombre.Size = new Size(241, 22);
             txtNombre.TabIndex = 7;
             // 
             // panel8
@@ -503,9 +505,11 @@
             // 
             txtContra.BorderStyle = BorderStyle.None;
             txtContra.Location = new Point(199, 66);
+            txtContra.MaxLength = 6;
             txtContra.Name = "txtContra";
             txtContra.Size = new Size(201, 22);
             txtContra.TabIndex = 7;
+            txtContra.KeyPress += txtContra_KeyPress;
             // 
             // panel6
             // 
@@ -522,7 +526,6 @@
             txtUser.Name = "txtUser";
             txtUser.Size = new Size(201, 22);
             txtUser.TabIndex = 5;
-            txtUser.TextChanged += textBox2_TextChanged;
             // 
             // label5
             // 
@@ -659,7 +662,7 @@
 
         private Panel panel1;
         private Label lblUsuario;
-        private Button button1;
+        private Button btnClose;
         private Panel panel2;
         private TextBox txtBuscar;
         private MenuStrip menuStrip1;
