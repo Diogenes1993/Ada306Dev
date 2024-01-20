@@ -183,9 +183,9 @@
             panelIcono.Controls.Add(flowLayoutPanel1);
             panelIcono.Controls.Add(pcbseleccion);
             panelIcono.Controls.Add(flowLayoutPanel2);
-            panelIcono.Location = new Point(0, 316);
+            panelIcono.Location = new Point(0, 0);
             panelIcono.Name = "panelIcono";
-            panelIcono.Size = new Size(720, 192);
+            panelIcono.Size = new Size(800, 508);
             panelIcono.TabIndex = 5;
             // 
             // flowLayoutPanel1

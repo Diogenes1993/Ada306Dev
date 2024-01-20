@@ -214,35 +214,41 @@ namespace PUNTO_DE_VENTA_COD_369_CSHARK
 
                 if (txtNombre.Text != "")
                 {
-                    try
+                    if (txtEmail.Text != "")
                     {
-                        SqlConnection conex = new SqlConnection();
-                        conex.ConnectionString = ConexionBD.conexion;
-                        conex.Open();
-                        SqlCommand cmd = new SqlCommand("insertar_usuario", conex);
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@nombre", txtNombre.Text);
-                        cmd.Parameters.AddWithValue("@login", txtUser.Text);
-                        cmd.Parameters.AddWithValue("@pass", txtContra.Text);
+                        
+                        if (lblEligeIcon.Visible == false)
+                        {
+                            try
+                            {
+                                SqlConnection conex = new SqlConnection();
+                                conex.ConnectionString = ConexionBD.conexion;
+                                conex.Open();
+                                SqlCommand cmd = new SqlCommand("insertar_usuario", conex);
+                                cmd.CommandType = CommandType.StoredProcedure;
+                                cmd.Parameters.AddWithValue("@nombre", txtNombre.Text);
+                                cmd.Parameters.AddWithValue("@login", txtUser.Text);
+                                cmd.Parameters.AddWithValue("@pass", txtContra.Text);
 
-                        cmd.Parameters.AddWithValue("@correo", txtEmail.Text);
-                        cmd.Parameters.AddWithValue("@rol", cmRol.Text);
-                        cmd.Parameters.AddWithValue("@estado", "ACTIVO");
+                                cmd.Parameters.AddWithValue("@correo", txtEmail.Text);
+                                cmd.Parameters.AddWithValue("@rol", cmRol.Text);
+                                cmd.Parameters.AddWithValue("@estado", "ACTIVO");
 
-                        System.IO.MemoryStream memorybyte = new System.IO.MemoryStream();
-                        pcbIcon.Image.Save(memorybyte, pcbIcon.Image.RawFormat);
+                                System.IO.MemoryStream memorybyte = new System.IO.MemoryStream();
+                                pcbIcon.Image.Save(memorybyte, pcbIcon.Image.RawFormat);
 
-                        cmd.Parameters.AddWithValue("@icono", memorybyte.GetBuffer());
-                        cmd.Parameters.AddWithValue("@nombre_icono", nombre_icon);
-                        cmd.ExecuteNonQuery();
-                        conex.Close();
-                        mostrar();
+                                cmd.Parameters.AddWithValue("@icono", memorybyte.GetBuffer());
+                                cmd.Parameters.AddWithValue("@nombre_icono", nombre_icon);
+                                cmd.ExecuteNonQuery();
+                                conex.Close();
+                                mostrar();
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show(ex.Message);
+                            }
+                        }
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-
                 }
             }
         }
